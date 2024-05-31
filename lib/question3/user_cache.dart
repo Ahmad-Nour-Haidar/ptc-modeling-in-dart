@@ -1,5 +1,7 @@
 import 'package:faker/faker.dart';
 
+import 'models/user/user_model.dart';
+
 class UserCache {
   /// Singleton instance
   static UserCache? _instance;
@@ -13,9 +15,9 @@ class UserCache {
     return _instance!;
   }
 
-  final _cache = {};
+  final _cache = <int, UserModel>{};
 
-  Map<String, dynamic>? getUserById(int? id) {
+  UserModel? getUserById(int? id) {
     if (id == null || id < 0) return null;
 
     /// if cache not contain the specific ID, then it is null, so initial it and return.
@@ -23,14 +25,15 @@ class UserCache {
     return _cache[id];
   }
 
-  Map<String, dynamic> _getFakeUser(int id) {
-    final fakeUser = {
+  UserModel _getFakeUser(int id) {
+    final userJson = {
       "id": id,
       "first_name": faker.person.firstName(),
       "last_name": faker.person.lastName(),
+      'email': faker.internet.email(),
       "about": faker.lorem.words(3).join(' '),
       "image": faker.image.image(),
     };
-    return fakeUser;
+    return UserModel.fromJson(userJson);
   }
 }
