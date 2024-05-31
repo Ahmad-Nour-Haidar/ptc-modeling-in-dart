@@ -1,14 +1,12 @@
 # [PTC at ITE](https://www.facebook.com/placement.training.center.ITE)
 
-# ![PTC at ITE](https://www.facebook.com/placement.training.center.ITE)
-
 # Modeling In Dart
 
 - [✨ Features](#-features)
 - [📱 App Preview](#-app-preview)
-- [⚙️ Installation](#-installation)
-- [🚀 Usage](#-usage)
 - [📂 Main Files](#-main-files)
+- [🚀 Usage](#-usage)
+- [⚙️ Installation](#-installation)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
@@ -36,6 +34,37 @@
 
 </div>
 
+## 📂 Main Files
+
+Here are the links to the main files in the project:
+
+- [main.dart](lib/main.dart)
+- [app.dart](lib/view/app/my_app.dart)
+- ### Categories
+    1. [Categories screen](lib/view/categories/categories_screen.dart)
+    2. [Categories data](lib/question2/data/categories.dart)
+- ### Venues
+    1. [Venues screen](lib/view/venues/venues_screen.dart)
+    2. [Venues data](lib/question2/data/venues.dart)
+- [Models](lib/question1/models)
+    - Data models created using `freezed` and `json_serializable`.
+- ### User
+    1. [User Model](lib/question3/models/user/user_model.dart)
+    2. [Users Data](lib/question3/data/users.dart)
+    3. [Users Cache](lib/question3/user_cache.dart)
+
+## 🚀 Usage
+
+To leverage the features in this app:
+
+- **Singleton Pattern**: Use the singleton pattern to manage your instances.
+- **Lazy Loading**: Ensure objects are only created when they are needed.
+- **Caching Data**: Utilize the caching mechanism to store and retrieve frequently accessed data
+  efficiently.
+- **Freezed**: Create immutable data classes easily using `freezed`.
+- **JsonSerializable**: Automatically convert between Dart objects and JSON
+  using `json_serializable`.
+
 ## ⚙️ Installation
 
 1. **Clone the repository**:
@@ -57,37 +86,6 @@
     ```bash
     flutter run
     ```
-
-## 🚀 Usage
-
-To leverage the features in this app:
-
-- **Singleton Pattern**: Use the singleton pattern to manage your instances.
-- **Lazy Loading**: Ensure objects are only created when they are needed.
-- **Caching Data**: Utilize the caching mechanism to store and retrieve frequently accessed data
-  efficiently.
-- **Freezed**: Create immutable data classes easily using `freezed`.
-- **JsonSerializable**: Automatically convert between Dart objects and JSON
-  using `json_serializable`.
-
-## 📂 Main Files
-
-Here are the links to the main files in the project:
-
-- [main.dart](lib/main.dart): The entry point of the application.
-- [app.dart](lib/view/app/my_app.dart): The main application widget.
-- ### Categories
-    1. [Categories screen](lib/view/categories/categories_screen.dart)
-    2. [Categories data](lib/question2/data/categories.dart)
-- ### Venuse
-    1. [Venuse screen](lib/view/venuse/venuse_screen.dart)
-    2. [Venuse data](lib/question2/data/venues.dart)
-- [Models](lib/question1/models)
-    - Data models created using `freezed` and `json_serializable`.
-- ### User
-    1. [User Model](lib/question3/models/user/user_model.dart)
-    2. [Users Data](lib/question3/data/users.dart)
-    3. [Users Cache](lib/question3/user_cache.dart)
 
 ## 🤝 Contributing
 
