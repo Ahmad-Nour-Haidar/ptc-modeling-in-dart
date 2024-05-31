@@ -12,6 +12,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           centerTitle: true,
+          titleTextStyle: TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 22,
+            color: Colors.blue,
+            letterSpacing: 1.0,
+          ),
         ),
       ),
       home: const HomeScreen(),

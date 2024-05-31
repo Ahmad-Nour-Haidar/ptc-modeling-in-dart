@@ -46,7 +46,8 @@ class CompanyScreen extends StatelessWidget {
             Text('Name: ${company.name}'),
             Text('Active: ${company.isActive == 1 ? "Yes" : "No"}'),
             Text(company.address.toString()),
-            Text('Established: ${company.established.toDateTime.toLocal()}'),
+            Text(
+                'Established: ${company.established.toDateTime.toLocal().dMMMyyyy}'),
             const SizedBox(height: 20),
             const Text(
               'Departments:',
@@ -63,7 +64,7 @@ class CompanyScreen extends StatelessWidget {
                     Text('Manager: ${dept.manager}'),
                     Text('Budget: \$${dept.budget}'),
                     Text(
-                      'Meeting Time: ${dept.meetingTime.toDateTime.dMMMyyyy}',
+                      'Meeting Time: ${dept.meetingTime.toDateTime.dMMMyyyyHMS}',
                     ),
                   ],
                 ),

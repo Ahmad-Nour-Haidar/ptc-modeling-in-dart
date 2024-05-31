@@ -32,13 +32,7 @@ class _VenuseScreenState extends State<VenuseScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Venues',
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 18,
-          ),
-        ),
+        title: const Text('Venues'),
       ),
       body: _isLoading || _venuse.isEmpty
           ? const LoadingWidget()

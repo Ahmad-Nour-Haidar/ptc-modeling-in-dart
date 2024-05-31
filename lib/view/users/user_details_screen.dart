@@ -38,9 +38,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'User Details',
-        ),
+        title: const Text('User Details'),
       ),
       body: _isLoading
           ? const LoadingWidget()
