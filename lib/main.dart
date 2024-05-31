@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:ptc_modeling_in_dart/question2/date/categories.dart';
 import 'package:ptc_modeling_in_dart/question2/date/languages.dart';
 import 'package:ptc_modeling_in_dart/question2/date/venues.dart';
+import 'package:ptc_modeling_in_dart/question3/user_cache.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  /// first time will take a few seconds
+  /// Lazy Loading
+  // first time will take a few seconds
   await Categories().load();
   print(Categories().categories);
 
-  /// another calls will be faster as data is already loaded
+  // another calls will be faster as data is already loaded
   await Categories().load();
   print(Categories().categories);
 
@@ -19,6 +21,12 @@ void main() async {
 
   await Languages().load();
   print(Languages().languages);
+
+  /// Caching
+  print(UserCache().getUserById(1));
+
+  // will not change
+  print(UserCache().getUserById(1));
 
   runApp(const MyApp());
 }
