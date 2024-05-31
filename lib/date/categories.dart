@@ -18,16 +18,16 @@ class Categories {
 
   /// Loads categories if not already loaded
   Future<void> load() async {
-    _categories ??= await getCategories();
+    _categories ??= await _getCategories();
   }
 
   /// Reloads categories
   Future<void> reload() async {
-    _categories = await getCategories();
+    _categories = await _getCategories();
   }
 
   /// Retrieves categories from an external source (simulated here)
-  Future<List<String>> getCategories() async {
+  Future<List<String>> _getCategories() async {
     return List.generate(
       1000,
       (index) => faker.lorem.words(3).join(' '),
