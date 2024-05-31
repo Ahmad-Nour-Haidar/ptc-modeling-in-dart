@@ -9,6 +9,14 @@ import '../company/company_screen.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  void push(BuildContext context, Widget widget) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => widget,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,13 +25,7 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ListTile(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const CategoriesScreen(),
-                ),
-              );
-            },
+            onTap: () => push(context, const CategoriesScreen()),
             title: const Text(
               'Show Categories',
               style: TextStyle(
@@ -32,13 +34,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           ListTile(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const VenuseScreen(),
-                ),
-              );
-            },
+            onTap: () => push(context, const VenuseScreen()),
             title: const Text(
               'Show Venuse',
               style: TextStyle(
@@ -47,13 +43,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           ListTile(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const LanguagesScreen(),
-                ),
-              );
-            },
+            onTap: () => push(context, const LanguagesScreen()),
             title: const Text(
               'Show Languages',
               style: TextStyle(
@@ -62,13 +52,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           ListTile(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const UsersScreen(),
-                ),
-              );
-            },
+            onTap: () => push(context, const UsersScreen()),
             title: const Text(
               'Show Users',
               style: TextStyle(
@@ -77,13 +61,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           ListTile(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const CompanyScreen(),
-                ),
-              );
-            },
+            onTap: () => push(context, const CompanyScreen()),
             title: const Text(
               'Show Company',
               style: TextStyle(
