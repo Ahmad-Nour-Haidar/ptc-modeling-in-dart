@@ -31,6 +31,7 @@ class Users {
 
   /// Retrieves users from an external source
   Future<List<int>> _getUsers() async {
+    await Future.delayed(const Duration(seconds: 5));
     List<int> items;
     const filePath = AppAttachments.users;
     final jsonString = await rootBundle.loadString(filePath);
