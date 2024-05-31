@@ -1,4 +1,7 @@
+import 'package:faker/faker.dart' show faker, random;
 import 'package:flutter/material.dart';
+import 'package:ptc_modeling_in_dart/core/extensions/date_time_extension.dart';
+import 'package:ptc_modeling_in_dart/question1/models/freezed_models/company/company.dart';
 import 'package:ptc_modeling_in_dart/question2/data/categories.dart';
 import 'package:ptc_modeling_in_dart/question2/data/languages.dart';
 import 'package:ptc_modeling_in_dart/question2/data/venues.dart';
@@ -32,6 +35,33 @@ void main() async {
   // will not change and get it quickly
   print((await UserCache().getUserById(1)));
   print((await UserCache().getUserById(1))?.completeName);
+
+  final company = Company(
+    isActive: random.integer(1, min: 0),
+    name: faker.company.name(),
+    address: Address(
+      street: faker.address.streetAddress(),
+      city: faker.address.city(),
+      state: faker.address.state(),
+      postalCode: faker.address.countryCode(),
+    ),
+    established: faker.date.dateTime(),
+    departments: [
+      Department(
+        deptId: random.string(24, min: 8),
+        name: faker.job.title(),
+        manager: faker.person.name(),
+        budget: random.integer(1000, min: 100).toDouble(),
+        meetingTime: faker.date.dateTime(maxYear: 2024).toIso8601String(),
+      ),
+    ],
+  );
+
+  print(company);
+
+  /// dMMMyyyy => is an extension I created it.
+  /// lib/core/extensions/date_time_extension.dart
+  print(company.established.dMMMyyyy);
 
   runApp(const MyApp());
 }
