@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ptc_modeling_in_dart/question2/data/categories.dart';
 import 'package:ptc_modeling_in_dart/question2/data/languages.dart';
 import 'package:ptc_modeling_in_dart/question2/data/venues.dart';
+import 'package:ptc_modeling_in_dart/question3/data/users.dart';
 import 'package:ptc_modeling_in_dart/question3/user_cache.dart';
 
 void main() async {
@@ -22,12 +23,15 @@ void main() async {
   await Languages().load();
   print(Languages().languages);
 
-  /// Caching
-  print(UserCache().getUserById(1));
+  await Users().load();
+  print(Users().users);
 
-  // will not change
-  print(UserCache().getUserById(1));
-  print(UserCache().getUserById(1)?.completeName);
+  /// Caching
+  print((await UserCache().getUserById(1)));
+
+  // will not change and get it quickly
+  print((await UserCache().getUserById(1)));
+  print((await UserCache().getUserById(1))?.completeName);
 
   runApp(const MyApp());
 }

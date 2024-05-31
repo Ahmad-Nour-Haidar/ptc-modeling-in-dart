@@ -17,11 +17,13 @@ class UserCache {
 
   final _cache = <int, UserModel>{};
 
-  UserModel? getUserById(int? id) {
+  Future<UserModel?> getUserById(int? id) async {
     if (id == null || id < 0) return null;
 
     /// if cache not contain the specific ID, then it is null, so initial it and return.
-    _cache[id] ??= _getFakeUser(id);
+    if (_cache.containsKey(id)) return _cache[id];
+    await Future.delayed(const Duration(seconds: 5));
+    _cache[id] = _getFakeUser(id);
     return _cache[id];
   }
 
