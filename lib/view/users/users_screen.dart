@@ -11,7 +11,7 @@ class UsersScreen extends StatefulWidget {
 }
 
 class _UsersScreenState extends State<UsersScreen> {
-  bool isLoading = false;
+  bool _isLoading = false;
   final _ids = <int>[];
 
   @override
@@ -23,11 +23,11 @@ class _UsersScreenState extends State<UsersScreen> {
   }
 
   Future<void> _initial() async {
-    setState(() => isLoading = true);
+    setState(() => _isLoading = true);
     await Users().load();
     _ids.clear();
     _ids.addAll(Users().users);
-    setState(() => isLoading = false);
+    setState(() => _isLoading = false);
   }
 
   @override
@@ -42,7 +42,7 @@ class _UsersScreenState extends State<UsersScreen> {
           ),
         ),
       ),
-      body: isLoading || _ids.isEmpty
+      body: _isLoading || _ids.isEmpty
           ? const LoadingWidget()
           : ListView.separated(
               itemCount: _ids.length,

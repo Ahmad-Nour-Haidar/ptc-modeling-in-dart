@@ -31,6 +31,7 @@ class Languages {
 
   /// Retrieves languages from an external source
   Future<List<String>> _getLanguages() async {
+    await Future.delayed(const Duration(seconds: 5));
     List<String> items;
     const filePath = AppAttachments.languages;
     final jsonString = await rootBundle.loadString(filePath);

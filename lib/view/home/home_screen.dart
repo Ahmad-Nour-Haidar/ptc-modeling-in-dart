@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ptc_modeling_in_dart/view/languages/languages_screen.dart';
 import 'package:ptc_modeling_in_dart/view/users/users_screen.dart';
 
 import '../company/company_screen.dart';
@@ -32,7 +33,13 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           ListTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const LanguagesScreen(),
+                ),
+              );
+            },
             title: const Text(
               'Show Languages',
               style: TextStyle(
