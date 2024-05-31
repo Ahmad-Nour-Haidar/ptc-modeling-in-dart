@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ptc_modeling_in_dart/question2/date/categories.dart';
-import 'package:ptc_modeling_in_dart/question2/date/languages.dart';
-import 'package:ptc_modeling_in_dart/question2/date/venues.dart';
+import 'package:ptc_modeling_in_dart/question2/data/categories.dart';
+import 'package:ptc_modeling_in_dart/question2/data/languages.dart';
+import 'package:ptc_modeling_in_dart/question2/data/venues.dart';
 import 'package:ptc_modeling_in_dart/question3/user_cache.dart';
 
 void main() async {
