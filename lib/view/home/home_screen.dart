@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ptc_modeling_in_dart/view/Venuse/venuse_screen.dart';
 import 'package:ptc_modeling_in_dart/view/languages/languages_screen.dart';
 import 'package:ptc_modeling_in_dart/view/users/users_screen.dart';
 
@@ -24,7 +25,13 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           ListTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const VenuseScreen(),
+                ),
+              );
+            },
             title: const Text(
               'Show Venuse',
               style: TextStyle(
