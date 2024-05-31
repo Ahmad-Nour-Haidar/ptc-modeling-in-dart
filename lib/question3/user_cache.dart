@@ -36,4 +36,6 @@ class UserCache {
     };
     return UserModel.fromJson(userJson);
   }
+
+  void clear() => _cache.clear();
 }

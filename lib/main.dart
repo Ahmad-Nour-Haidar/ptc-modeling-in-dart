@@ -27,6 +27,7 @@ void main() async {
 
   // will not change
   print(UserCache().getUserById(1));
+  print(UserCache().getUserById(1)?.completeName);
 
   runApp(const MyApp());
 }
