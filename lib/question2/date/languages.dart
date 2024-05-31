@@ -34,7 +34,12 @@ class Languages {
     List<String> items;
     const filePath = AppAttachments.languages;
     final jsonString = await rootBundle.loadString(filePath);
-    items = await json.decode(jsonString);
+    final List result = await json.decode(jsonString); // List<dynamic>
+    // print(jsonString);
+    // print(result);
+    // print(result.runtimeType);
+    // print(result.map((e) => e.toString()).toList().runtimeType);
+    items = result.map((e) => e.toString()).toList();
     return items;
   }
 

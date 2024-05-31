@@ -1,6 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:ptc_modeling_in_dart/question2/date/categories.dart';
+import 'package:ptc_modeling_in_dart/question2/date/languages.dart';
+import 'package:ptc_modeling_in_dart/question2/date/venues.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  /// first time will take a few seconds
+  await Categories().load();
+  print(Categories().categories);
+
+  /// another calls will be faster as data is already loaded
+  await Categories().load();
+  print(Categories().categories);
+
+  await Venues().load();
+  print(Venues().venues);
+
+  await Languages().load();
+  print(Languages().languages);
+
   runApp(const MyApp());
 }
 

@@ -18,7 +18,10 @@ class Categories {
 
   /// Loads categories if not already loaded
   Future<void> load() async {
-    _categories ??= await _getCategories();
+    if (_categories == null) {
+      await Future.delayed(const Duration(seconds: 5));
+      _categories = await _getCategories();
+    }
   }
 
   /// Reloads categories

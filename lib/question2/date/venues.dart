@@ -18,7 +18,10 @@ class Venues {
 
   /// Loads venues if not already loaded
   Future<void> load() async {
-    _venues ??= await _getVenues();
+    if (_venues == null) {
+      await Future.delayed(const Duration(seconds: 5));
+      _venues = await _getVenues();
+    }
   }
 
   /// Reloads venues
