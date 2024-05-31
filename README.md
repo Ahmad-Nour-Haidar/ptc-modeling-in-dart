@@ -38,20 +38,20 @@
 
 Here are the links to the main files in the project:
 
-- [extensions](lib/core/extensions)
 - [main.dart](lib/main.dart)
 - [app.dart](lib/view/app/my_app.dart)
-- ### Categories
+- [extensions](lib/core/extensions)
+- #### Categories
     - [Categories screen](lib/view/categories/categories_screen.dart)
     - [Categories data](lib/question2/data/categories.dart)
 
-- ### Venues
+- #### Venues
     - [Venues screen](lib/view/venuse/venuse_screen.dart)
     - [Venues data](lib/question2/data/venues.dart)
 
 - [Models](lib/question1/models)
     - Data models created using `freezed` and `json_serializable`.
-- ### User
+- #### User
     - [User Model](lib/question3/models/user/user_model.dart)
     - [Users Data](lib/question3/data/users.dart)
     - [Users Cache](lib/question3/user_cache.dart)
