@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ptc_modeling_in_dart/core/widgets/loading.dart';
 import 'package:ptc_modeling_in_dart/question3/data/users.dart';
+import 'package:ptc_modeling_in_dart/view/users/user_details_screen.dart';
 
 class UsersScreen extends StatefulWidget {
   const UsersScreen({super.key});
@@ -41,16 +43,20 @@ class _UsersScreenState extends State<UsersScreen> {
         ),
       ),
       body: isLoading || _ids.isEmpty
-          ? const Center(
-              child: CircularProgressIndicator(
-                strokeCap: StrokeCap.round,
-                color: Colors.lightGreenAccent,
-              ),
-            )
+          ? const LoadingWidget()
           : ListView.separated(
               itemCount: _ids.length,
               separatorBuilder: (_, __) => const SizedBox(height: 16),
               itemBuilder: (_, index) => ListTile(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => UserDetailsScreen(
+                        id: _ids[index],
+                      ),
+                    ),
+                  );
+                },
                 title: Text(
                   'User ID: $index',
                 ),

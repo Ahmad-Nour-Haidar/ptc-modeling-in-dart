@@ -31,7 +31,7 @@ class UserCache {
       "first_name": faker.person.firstName(),
       "last_name": faker.person.lastName(),
       'email': faker.internet.email(),
-      "about": faker.lorem.words(3).join(' '),
+      "about": faker.lorem.words(20).join(' '),
       "image": faker.image.image(),
     };
     return UserModel.fromJson(userJson);
