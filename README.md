@@ -42,21 +42,19 @@ Here are the links to the main files in the project:
 - [main.dart](lib/main.dart)
 - [app.dart](lib/view/app/my_app.dart)
 - ### Categories
-    1. [Categories screen](lib/view/categories/categories_screen.dart)
-    2. [Categories data](lib/question2/data/categories.dart)
+    - [Categories screen](lib/view/categories/categories_screen.dart)
+    - [Categories data](lib/question2/data/categories.dart)
 
-### Venues
-
-    1. [Venues screen](lib/view/venuse/venuse_screen.dart)
-
-    2. [Venues data](lib/question2/data/venues.dart)
+- ### Venues
+    - [Venues screen](lib/view/venuse/venuse_screen.dart)
+    - [Venues data](lib/question2/data/venues.dart)
 
 - [Models](lib/question1/models)
     - Data models created using `freezed` and `json_serializable`.
 - ### User
-    1. [User Model](lib/question3/models/user/user_model.dart)
-    2. [Users Data](lib/question3/data/users.dart)
-    3. [Users Cache](lib/question3/user_cache.dart)
+    - [User Model](lib/question3/models/user/user_model.dart)
+    - [Users Data](lib/question3/data/users.dart)
+    - [Users Cache](lib/question3/user_cache.dart)
 
 ## 🚀 Usage
 
