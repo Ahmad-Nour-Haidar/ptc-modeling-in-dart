@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'company.freezed.dart';
+
 part 'company.g.dart';
 
 @freezed
@@ -13,7 +14,8 @@ class Company with _$Company {
     required List<Department> departments,
   }) = _Company;
 
-  factory Company.fromJson(Map<String, dynamic> json) => _$CompanyFromJson(json);
+  factory Company.fromJson(Map<String, dynamic> json) =>
+      _$CompanyFromJson(json);
 }
 
 @freezed
@@ -25,7 +27,8 @@ class Address with _$Address {
     required String postalCode,
   }) = _Address;
 
-  factory Address.fromJson(Map<String, dynamic> json) => _$AddressFromJson(json);
+  factory Address.fromJson(Map<String, dynamic> json) =>
+      _$AddressFromJson(json);
 }
 
 @freezed
@@ -40,7 +43,8 @@ class Department with _$Department {
     required String meetingTime,
   }) = _Department;
 
-  factory Department.fromJson(Map<String, dynamic> json) => _$DepartmentFromJson(json);
+  factory Department.fromJson(Map<String, dynamic> json) =>
+      _$DepartmentFromJson(json);
 }
 
 @freezed
@@ -50,5 +54,6 @@ class Availability with _$Availability {
     required bool inStore,
   }) = _Availability;
 
-  factory Availability.fromJson(Map<String, dynamic> json) => _$AvailabilityFromJson(json);
+  factory Availability.fromJson(Map<String, dynamic> json) =>
+      _$AvailabilityFromJson(json);
 }
