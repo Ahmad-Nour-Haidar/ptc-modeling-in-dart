@@ -25,7 +25,6 @@ class _UsersScreenState extends State<UsersScreen> {
   Future<void> _initial() async {
     setState(() => _isLoading = true);
     await Users().load();
-    _ids.clear();
     _ids.addAll(Users().users);
     setState(() => _isLoading = false);
   }

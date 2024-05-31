@@ -24,7 +24,6 @@ class _VenuseScreenState extends State<VenuseScreen> {
   Future<void> _initial() async {
     setState(() => _isLoading = true);
     await Venues().load();
-    _venuse.clear();
     _venuse.addAll(Venues().venues);
     setState(() => _isLoading = false);
   }

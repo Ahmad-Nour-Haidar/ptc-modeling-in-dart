@@ -34,6 +34,5 @@ void main() async {
   // print((await UserCache().getUserById(1)));
   // print((await UserCache().getUserById(1))?.completeName);
 
-
   runApp(const MyApp());
 }

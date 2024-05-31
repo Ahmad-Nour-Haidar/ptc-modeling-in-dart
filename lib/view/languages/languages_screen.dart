@@ -24,7 +24,6 @@ class _LanguagesScreenState extends State<LanguagesScreen> {
   Future<void> _initial() async {
     setState(() => _isLoading = true);
     await Languages().load();
-    _languages.clear();
     _languages.addAll(Languages().languages);
     setState(() => _isLoading = false);
   }

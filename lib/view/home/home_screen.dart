@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ptc_modeling_in_dart/view/Venuse/venuse_screen.dart';
+import 'package:ptc_modeling_in_dart/view/categories/categories_screen.dart';
 import 'package:ptc_modeling_in_dart/view/languages/languages_screen.dart';
 import 'package:ptc_modeling_in_dart/view/users/users_screen.dart';
 
@@ -16,7 +17,13 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ListTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const CategoriesScreen(),
+                ),
+              );
+            },
             title: const Text(
               'Show Categories',
               style: TextStyle(
