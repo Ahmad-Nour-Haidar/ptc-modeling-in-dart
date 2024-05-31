@@ -44,11 +44,11 @@ Here are the links to the main files in the project:
 - [extensions](lib/core/extensions)
 - #### Categories
     - [Categories screen](lib/view/categories/categories_screen.dart)
-    - [Categories data](lib/question2/data/categories.dart)
+    - [Categories Data - Cache](lib/question2/data/categories.dart)
 
 - #### Venues
     - [Venues screen](lib/view/venuse/venuse_screen.dart)
-    - [Venues data](lib/question2/data/venues.dart)
+    - [Venues Data - Cache](lib/question2/data/venues.dart)
 
 - [Models](lib/question1/models)
     - Data models created using `freezed` and `json_serializable`.
