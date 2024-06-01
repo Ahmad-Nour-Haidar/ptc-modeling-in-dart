@@ -57,6 +57,11 @@ Here are the links to the main files in the project:
     - [Users Data](lib/question3/data/users_data.dart)
     - [Users Cache](lib/question3/cache/user_cache.dart)
 
+- #### Company
+    - [Company Model](lib/question1/models/freezed_models/company/company.dart)
+    - [Company Data](lib/question3/data/company_data.dart)
+    - [Company Cache](lib/question3/cache/app_cache.dart)
+
 ## 🚀 Usage
 
 To leverage the features in this app:
