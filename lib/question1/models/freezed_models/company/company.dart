@@ -7,14 +7,14 @@ part 'company.freezed.dart';
 
 part 'company.g.dart';
 
-int? readIsActiveValue(Map map, String key) {
-  if (map.containsKey('isActive')) {
-    return map['isActive'];
-  } else if (map.containsKey('is_active')) {
-    return map['is_active'];
-  } else {
-    return null;
+int? readIsActiveValue(Map json, String key) {
+  final keys = ['isActive', 'is_active'];
+  for (final e in keys) {
+    if (json.containsKey(e)) {
+      return json[e];
+    }
   }
+  return null;
 }
 
 @freezed
