@@ -24,7 +24,7 @@
 
 <div style="display: flex; flex-wrap: wrap; gap: 50px;">
 
-<img src="app-preview/Screenshot1.png" alt="App Preview 1" height="400" width="200">
+<img src="app-preview/Screenshot01.png" alt="App Preview 1" height="400" width="200">
 <img src="app-preview/Screenshot2.png" alt="App Preview 2" height="400" width="200">
 <img src="app-preview/Screenshot3.png" alt="App Preview 3" height="400" width="200">
 <img src="app-preview/Screenshot4.png" alt="App Preview 4" height="400" width="200">
