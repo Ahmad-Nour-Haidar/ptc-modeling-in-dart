@@ -20,23 +20,18 @@ class CompaniesData {
 
   /// Loads users if not already loaded
   Future<Object?> load(final String path) async {
-    // final dataFromCache = AppCache().getFromCache(path);
-    // if (dataFromCache != null) return dataFromCache;
-    // try {
-      // await Future.delayed(const Duration(seconds: 5));
+    final dataFromCache = AppCache().getFromCache(path);
+    if (dataFromCache != null) return dataFromCache;
+    try {
+      await Future.delayed(const Duration(seconds: 5));
       final jsonString = await rootBundle.loadString(path);
-      print(jsonString);
       final jsonCompany = json.decode(jsonString)['company'];
-      print(jsonCompany);
       final company = Company.fromJson(jsonCompany);
-      print(company.runtimeType);
-      print(company.departments[0].runtimeType);
-      print(company.isActive);
       AppCache().setInCache(path, company);
       return company;
-    // } catch (e) {
-    //   return null;
-    // }
+    } catch (e) {
+      return null;
+    }
   }
 
   /// Reloads cached object
