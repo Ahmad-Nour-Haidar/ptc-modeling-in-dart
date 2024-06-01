@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ptc_modeling_in_dart/core/widgets/loading.dart';
-import 'package:ptc_modeling_in_dart/question3/data/users.dart';
+import 'package:ptc_modeling_in_dart/question3/data/users_data.dart';
 import 'package:ptc_modeling_in_dart/view/users/user_details_screen.dart';
 
 class UsersScreen extends StatefulWidget {
@@ -24,8 +24,8 @@ class _UsersScreenState extends State<UsersScreen> {
 
   Future<void> _initial() async {
     setState(() => _isLoading = true);
-    await Users().load();
-    _ids.addAll(Users().users);
+    await UsersData().load();
+    _ids.addAll(UsersData().users);
     setState(() => _isLoading = false);
   }
 

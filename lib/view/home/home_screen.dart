@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ptc_modeling_in_dart/core/assets/app_attachments.dart';
 import 'package:ptc_modeling_in_dart/view/Venuse/venuse_screen.dart';
 import 'package:ptc_modeling_in_dart/view/categories/categories_screen.dart';
 import 'package:ptc_modeling_in_dart/view/languages/languages_screen.dart';
@@ -64,9 +65,24 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           ListTile(
-            onTap: () => push(context, const CompanyScreen()),
+            onTap: () => push(
+              context,
+              const CompanyScreen(path: AppAttachments.test1),
+            ),
             title: const Text(
-              'Show Company',
+              'Show Company test1',
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+          ListTile(
+            onTap: () => push(
+              context,
+              const CompanyScreen(path: AppAttachments.test2),
+            ),
+            title: const Text(
+              'Show Company test2',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
               ),

@@ -54,8 +54,8 @@ Here are the links to the main files in the project:
     - Data models created using `freezed` and `json_serializable`.
 - #### User
     - [User Model](lib/question3/models/user/user_model.dart)
-    - [Users Data](lib/question3/data/users.dart)
-    - [Users Cache](lib/question3/user_cache.dart)
+    - [Users Data](lib/question3/data/users_data.dart)
+    - [Users Cache](lib/question3/cache/user_cache.dart)
 
 ## 🚀 Usage
 

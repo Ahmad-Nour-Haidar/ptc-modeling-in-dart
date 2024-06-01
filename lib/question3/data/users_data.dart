@@ -3,16 +3,16 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:ptc_modeling_in_dart/core/assets/app_attachments.dart';
 
-class Users {
+class UsersData {
   /// Singleton instance
-  static Users? _instance;
+  static UsersData? _instance;
 
   /// Private constructor
-  Users._();
+  UsersData._();
 
   /// Factory constructor for returning the singleton instance with lazy loading
-  factory Users() {
-    _instance ??= Users._();
+  factory UsersData() {
+    _instance ??= UsersData._();
     return _instance!;
   }
 

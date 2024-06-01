@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ptc_modeling_in_dart/core/widgets/loading.dart';
 import 'package:ptc_modeling_in_dart/question3/models/user/user_model.dart';
-import 'package:ptc_modeling_in_dart/question3/user_cache.dart';
+import 'package:ptc_modeling_in_dart/question3/cache/user_cache.dart';
 
 class UserDetailsScreen extends StatefulWidget {
   const UserDetailsScreen({

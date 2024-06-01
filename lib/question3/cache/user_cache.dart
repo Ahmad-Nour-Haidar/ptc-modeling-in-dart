@@ -1,6 +1,6 @@
 import 'package:faker/faker.dart';
 
-import 'models/user/user_model.dart';
+import '../models/user/user_model.dart';
 
 class UserCache {
   /// Singleton instance
