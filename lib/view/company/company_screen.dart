@@ -2,7 +2,7 @@ import 'package:faker/faker.dart' show faker, random;
 import 'package:flutter/material.dart';
 import 'package:ptc_modeling_in_dart/core/extensions/date_time_extension.dart';
 import 'package:ptc_modeling_in_dart/core/extensions/string_extension.dart';
-import 'package:ptc_modeling_in_dart/question1/models/company_model.dart';
+import 'package:ptc_modeling_in_dart/question1/company_model.dart';
 
 class CompanyScreen extends StatelessWidget {
   const CompanyScreen({super.key});
