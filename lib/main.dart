@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ptc_modeling_in_dart/view/app/my_app.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  //
+  // print(DateTime.parse("2023-05-24T00:00:00Z"));
 
   // /// Lazy Loading
   // // first time will take a few seconds

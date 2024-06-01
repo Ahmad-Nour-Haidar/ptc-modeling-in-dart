@@ -6,8 +6,7 @@ part of 'availability.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AvailabilityImpl _$$AvailabilityImplFromJson(Map<String, dynamic> json) =>
-    _$AvailabilityImpl(
+_$AvailabilityImpl _$$AvailabilityImplFromJson(Map json) => _$AvailabilityImpl(
       online: json['online'] as bool,
       inStore: json['inStore'] as bool,
     );

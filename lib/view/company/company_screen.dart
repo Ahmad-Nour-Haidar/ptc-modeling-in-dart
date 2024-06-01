@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ptc_modeling_in_dart/core/extensions/date_time_extension.dart';
-import 'package:ptc_modeling_in_dart/core/extensions/string_extension.dart';
 import 'package:ptc_modeling_in_dart/core/widgets/loading.dart';
-import 'package:ptc_modeling_in_dart/question1/company_model.dart';
-import 'package:ptc_modeling_in_dart/question3/data/company_data.dart';
+
+import '../../question1/models/freezed_models/company/company.dart';
+import '../../question3/data/company_data.dart';
 
 class CompanyScreen extends StatefulWidget {
   const CompanyScreen({
@@ -52,8 +52,7 @@ class _CompanyScreenState extends State<CompanyScreen> {
                       Text('Name: ${_company!.name}'),
                       Text('Active: ${_company!.isActive == 1 ? "Yes" : "No"}'),
                       Text(_company!.address.toString()),
-                      Text(
-                          'Established: ${_company!.established.toDateTime.toLocal().dMMMyyyy}'),
+                      Text('Established: ${_company!.established.dMMMyyyy}'),
                       const SizedBox(height: 20),
                       const Text(
                         'Departments:',
@@ -71,7 +70,7 @@ class _CompanyScreenState extends State<CompanyScreen> {
                               Text('Manager: ${dept.manager}'),
                               Text('Budget: \$${dept.budget}'),
                               Text(
-                                'Meeting Time: ${dept.meetingTime.toDateTime.dMMMyyyyHMS}',
+                                'Meeting Time: ${dept.meetingTime}',
                               ),
                             ],
                           ),

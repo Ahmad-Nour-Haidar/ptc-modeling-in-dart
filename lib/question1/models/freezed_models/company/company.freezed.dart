@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'company_model.dart';
+part of 'company.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -20,9 +20,8 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Company {
-  @JsonKey(name: 'isActive')
-  @JsonKey(name: 'is_active')
-  int get isActive => throw _privateConstructorUsedError;
+  @JsonKey(readValue: readIsActiveValue)
+  int? get isActive => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   Address? get address => throw _privateConstructorUsedError;
   DateTime get established => throw _privateConstructorUsedError;
@@ -39,7 +38,7 @@ abstract class $CompanyCopyWith<$Res> {
       _$CompanyCopyWithImpl<$Res, Company>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'isActive') @JsonKey(name: 'is_active') int isActive,
+      {@JsonKey(readValue: readIsActiveValue) int? isActive,
       String name,
       Address? address,
       DateTime established,
@@ -61,17 +60,17 @@ class _$CompanyCopyWithImpl<$Res, $Val extends Company>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isActive = null,
+    Object? isActive = freezed,
     Object? name = null,
     Object? address = freezed,
     Object? established = null,
     Object? departments = null,
   }) {
     return _then(_value.copyWith(
-      isActive: null == isActive
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -112,7 +111,7 @@ abstract class _$$CompanyImplCopyWith<$Res> implements $CompanyCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'isActive') @JsonKey(name: 'is_active') int isActive,
+      {@JsonKey(readValue: readIsActiveValue) int? isActive,
       String name,
       Address? address,
       DateTime established,
@@ -133,17 +132,17 @@ class __$$CompanyImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isActive = null,
+    Object? isActive = freezed,
     Object? name = null,
     Object? address = freezed,
     Object? established = null,
     Object? departments = null,
   }) {
     return _then(_$CompanyImpl(
-      isActive: null == isActive
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -168,9 +167,7 @@ class __$$CompanyImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CompanyImpl implements _Company {
   const _$CompanyImpl(
-      {@JsonKey(name: 'isActive')
-      @JsonKey(name: 'is_active')
-      required this.isActive,
+      {@JsonKey(readValue: readIsActiveValue) required this.isActive,
       required this.name,
       this.address,
       required this.established,
@@ -181,9 +178,8 @@ class _$CompanyImpl implements _Company {
       _$$CompanyImplFromJson(json);
 
   @override
-  @JsonKey(name: 'isActive')
-  @JsonKey(name: 'is_active')
-  final int isActive;
+  @JsonKey(readValue: readIsActiveValue)
+  final int? isActive;
   @override
   final String name;
   @override
@@ -239,9 +235,7 @@ class _$CompanyImpl implements _Company {
 
 abstract class _Company implements Company {
   const factory _Company(
-      {@JsonKey(name: 'isActive')
-      @JsonKey(name: 'is_active')
-      required final int isActive,
+      {@JsonKey(readValue: readIsActiveValue) required final int? isActive,
       required final String name,
       final Address? address,
       required final DateTime established,
@@ -250,9 +244,8 @@ abstract class _Company implements Company {
   factory _Company.fromJson(Map<String, dynamic> json) = _$CompanyImpl.fromJson;
 
   @override
-  @JsonKey(name: 'isActive')
-  @JsonKey(name: 'is_active')
-  int get isActive;
+  @JsonKey(readValue: readIsActiveValue)
+  int? get isActive;
   @override
   String get name;
   @override

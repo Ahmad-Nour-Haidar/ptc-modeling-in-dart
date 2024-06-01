@@ -6,8 +6,7 @@ part of 'address.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AddressImpl _$$AddressImplFromJson(Map<String, dynamic> json) =>
-    _$AddressImpl(
+_$AddressImpl _$$AddressImplFromJson(Map json) => _$AddressImpl(
       street: json['street'] as String,
       city: json['city'] as String,
       state: json['state'] as String,

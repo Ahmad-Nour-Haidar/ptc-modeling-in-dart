@@ -13,8 +13,8 @@ class Department with _$Department {
     required String name,
     required String manager,
     required double budget,
-    required int year,
-    required Availability availability,
+    int? year,
+    Availability? availability,
     @JsonKey(name: 'meeting_time') required String meetingTime,
   }) = _Department;
 

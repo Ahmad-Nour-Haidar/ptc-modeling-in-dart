@@ -6,15 +6,16 @@ part of 'department.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DepartmentImpl _$$DepartmentImplFromJson(Map<String, dynamic> json) =>
-    _$DepartmentImpl(
+_$DepartmentImpl _$$DepartmentImplFromJson(Map json) => _$DepartmentImpl(
       deptId: json['deptId'] as String,
       name: json['name'] as String,
       manager: json['manager'] as String,
       budget: (json['budget'] as num).toDouble(),
-      year: (json['year'] as num).toInt(),
-      availability:
-          Availability.fromJson(json['availability'] as Map<String, dynamic>),
+      year: (json['year'] as num?)?.toInt(),
+      availability: json['availability'] == null
+          ? null
+          : Availability.fromJson(
+              Map<String, dynamic>.from(json['availability'] as Map)),
       meetingTime: json['meeting_time'] as String,
     );
 
