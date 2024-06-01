@@ -18,7 +18,7 @@ class CompaniesData {
     return _instance!;
   }
 
-  /// Loads users if not already loaded
+  /// Loads company if not already loaded
   Future<Object?> load(final String path) async {
     final dataFromCache = AppCache().getFromCache(path);
     if (dataFromCache != null) return dataFromCache;
