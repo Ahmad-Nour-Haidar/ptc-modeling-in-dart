@@ -20,7 +20,7 @@ int? readIsActiveValue(Map json, String key) {
 @freezed
 class Company with _$Company {
   const factory Company({
-    @JsonKey(readValue: readIsActiveValue) required int? isActive,
+    @JsonKey(readValue: readIsActiveValue) int? isActive,
     required String name,
     Address? address,
     required DateTime established,

@@ -167,7 +167,7 @@ class __$$CompanyImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CompanyImpl implements _Company {
   const _$CompanyImpl(
-      {@JsonKey(readValue: readIsActiveValue) required this.isActive,
+      {@JsonKey(readValue: readIsActiveValue) this.isActive,
       required this.name,
       this.address,
       required this.established,
@@ -235,7 +235,7 @@ class _$CompanyImpl implements _Company {
 
 abstract class _Company implements Company {
   const factory _Company(
-      {@JsonKey(readValue: readIsActiveValue) required final int? isActive,
+      {@JsonKey(readValue: readIsActiveValue) final int? isActive,
       required final String name,
       final Address? address,
       required final DateTime established,

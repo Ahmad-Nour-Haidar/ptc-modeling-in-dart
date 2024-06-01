@@ -51,7 +51,7 @@ class _CompanyScreenState extends State<CompanyScreen> {
                     children: [
                       Text('Name: ${_company!.name}'),
                       Text('Active: ${_company!.isActive == 1 ? "Yes" : "No"}'),
-                      Text(_company!.address.toString()),
+                      Text((_company!.address ?? '').toString()),
                       Text('Established: ${_company!.established.dMMMyyyy}'),
                       const SizedBox(height: 20),
                       const Text(
